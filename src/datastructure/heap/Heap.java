@@ -13,6 +13,7 @@ public class Heap<E> {
 
     //초기 공간 할당 X
     public Heap(){
+
         this(null);
     }
 
