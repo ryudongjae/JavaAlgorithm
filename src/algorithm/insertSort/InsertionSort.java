@@ -12,7 +12,7 @@ public class InsertionSort {
 
             int target =a[i];
 
-            int j =i-1;
+            int j = i-1;
             //ㅌ타겟이 이전 원소보다 크기 전까지 반복
             while (j>= 0&& target<a[j]){
                 a[j+1] = a[j];
