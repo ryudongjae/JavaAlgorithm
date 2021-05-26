@@ -22,7 +22,7 @@ public class Selection_sort2 {
     }
 
     public static void main(String[] args) {
-        Selection_sort2 s = new Selection_sort2();
+        Selection_sort2 s = new Selection_sort2(); 
         int a[] = {4,7,2,3,1,6,5};
         s.sort(a);
 

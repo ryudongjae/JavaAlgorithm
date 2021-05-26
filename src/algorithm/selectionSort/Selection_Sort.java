@@ -8,8 +8,9 @@ package algorithm.selectionSort;
 */
 public class Selection_Sort{
 
-    public static void selection_sort(int[]a){
+    public void selection_sort(int[]a){
         selection_sort(a,a.length);
+
     }
 
     private static void selection_sort(int [] a, int size){
@@ -33,4 +34,5 @@ public class Selection_Sort{
         a[i] = a[j];
         a[j] = a[temp];
     }
+
 }
