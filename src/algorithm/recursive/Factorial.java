@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.recursive;
 
 import java.util.List;
 import java.util.Scanner;
