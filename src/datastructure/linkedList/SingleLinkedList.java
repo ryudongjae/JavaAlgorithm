@@ -1,10 +1,14 @@
 package datastructure.linkedList;
 
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.NoSuchElementException;
+
 
 class Node<E> {
     E data;
+
     Node<E> next;
 
     Node(E data){

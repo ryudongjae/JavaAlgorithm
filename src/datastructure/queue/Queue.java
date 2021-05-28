@@ -1,6 +1,6 @@
 package datastructure.queue;
 
-interface queueInterface{
+interface queueInterface<E>{
     boolean isFull();
     boolean isEmpty();
     void enqueue(char data);
