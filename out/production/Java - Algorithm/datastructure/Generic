@@ -1,0 +1,28 @@
+A->B->C
+A->D->E
+
+1. <? extends T>
+이 것은 T 타입의 자식(자손) 타입만 가능하다는 의미다. 즉, 다음과 같은 경우들이 있다.
+<? extends B>	// B와 C타입만 올 수 있음
+<? extends E>	// E타입만 올 수 있음
+<? extends A>	// A, B, C, D, E 타입이 올 수 있음
+
+2. <? super T>
+이 것은 T 타입의 부모(조상) 타입만 가능하다는 의미다. 즉, 다음과 같은 경우들이 있다.
+
+<? super B>	// B와 A타입만 올 수 있음
+<? super E>	// E, D, A타입만 올 수 있음
+<? super A>	// A타입만 올 수 있음
+
+
+
+3. <?> (와일드 카드 : Wild Card)
+
+마지막으로 와일드 카드다.
+이 와일드 카드 <?> 은 <? extends Object> 와 마찬가지다. Object는 자바에서의 모든 API 및 사용자 클래스의 최상위 타입이다. 한마디로 다음과 같은 의미나 마찬가지다.
+
+
+public class ClassName <E extends Comparable<? super E> { ... }
+extends는 앞서 말했듯 extends 뒤에오는 타입이 최상위 타입이 되고, 해당 타입과 그에 대한 하위 타입이라고 했다. 그럼 역으로 생각해보면 이렇다.
+ E 객체는 반드시 Comparable을 구현해야한다는 의미
+-->"E 자기 자신 및 조상 타입과 비교할 수 있는 E"
