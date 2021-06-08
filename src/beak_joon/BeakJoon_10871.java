@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+//X보다 작은 수
+
 public class BeakJoon_10871 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

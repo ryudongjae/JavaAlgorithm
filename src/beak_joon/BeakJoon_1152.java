@@ -1,11 +1,14 @@
 package beak_joon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 /*
     단어의 개수
  */
-public class BeakJoon1152 {
+public class BeakJoon_1152 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,3 +23,13 @@ public class BeakJoon1152 {
         System.out.println(stringTokenizer.countTokens());
     }
 }
+
+
+class BeakJoon1152_2{
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        System.out.println(st.countTokens());
+    }
+        }

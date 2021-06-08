@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * 최대값
  * */
-public class BeakJoon2562 {
+public class BeakJoon_2562 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
