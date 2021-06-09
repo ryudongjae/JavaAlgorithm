@@ -12,7 +12,7 @@ public class BeakJoon_1001 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String st = br.readLine(); //eadLine() 은 한 행을 전부 읽기
+        String st = br.readLine(); //readLine() 은 한 행을 전부 읽기
 
         StringTokenizer str = new StringTokenizer(st," ");
         int a = Integer.parseInt(str.nextToken());
