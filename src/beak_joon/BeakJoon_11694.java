@@ -13,7 +13,7 @@ public class BeakJoon_11694 {
         int N = Integer.parseInt(br.readLine());
         int input[] = new int[N];
 
-        boolean flag = false; // 돌이 1개인 더미만 존재하는가?
+        boolean flag = false; // 돌이 1개인 더미만 존재하는지
         int num = 0; // 돌이 1개인 더미의 개수
 
         st = new StringTokenizer(br.readLine());
@@ -49,8 +49,7 @@ public class BeakJoon_11694 {
                 bw.write("cubelover");
             } else if (num % 2 == 0) {
                 // 돌이 1개인 더미가 짝수인 경우
-                // 돌이 1개가 아닌 임의의 더미를 돌이 1개인 더미로
-                // 만들어주어야 한다.
+                // 돌이 1개가 아닌 임의의 더미를 돌이 1개인 더미로 만들어 준다
 
                 for (int i = 0; i < N; i++) {
                     if (input[i] != 1) {
