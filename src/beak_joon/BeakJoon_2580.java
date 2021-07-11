@@ -26,7 +26,7 @@ public class BeakJoon_2580 {
     public static void sudoku(int row, int col) {
 
         if (col == 9) {
-            sudoku(col + 1, 0);
+            sudoku(row + 1, 0);
             return;
         }
 
