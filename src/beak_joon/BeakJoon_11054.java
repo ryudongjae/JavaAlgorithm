@@ -19,7 +19,7 @@ public class BeakJoon_11054 {
         le_dp = new int[N];
         seq = new int[N];
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
         for(int i = 0; i < N; i++){
             seq[i] = Integer.parseInt(st.nextToken());
@@ -40,24 +40,24 @@ public class BeakJoon_11054 {
 
     }
 
-    static void LDS() {
+    static void LIS() {
         for(int i = 0; i < N; i++){
             ri_dp[i] = 1;
 
             for(int j = 0; j < i; j++){
-                if (seq[j] > seq[i] && ri_dp[i] > ri_dp[j] + 1){
+                if (seq[j] < seq[i] && ri_dp[i] < ri_dp[j] + 1){
                     ri_dp[i] = ri_dp[j] +1;
                 }
             }
         }
     }
 
-    static void LIS() {
+    static void LDS() {
         for(int i = N-1; i >= 0; i--){
-            ri_dp[i] = 1;
+            le_dp[i] = 1;
 
-            for(int j = N; j > i; j--){
-                if (seq[j] > seq[i] && le_dp[i] > le_dp[j] + 1){
+            for(int j = N -1; j > i; j--){
+                if (seq[j] < seq[i] && le_dp[i] < le_dp[j] + 1){
                     le_dp[i] = le_dp[j] +1;
                 }
             }
