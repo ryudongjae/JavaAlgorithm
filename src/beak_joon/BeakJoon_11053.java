@@ -25,7 +25,7 @@ public class BeakJoon_11053 {
 
             for(int j = 0; j < i; j++){
 
-                if (seq[j] > seq[i] && dp[i] > dp[j] + 1){
+                if (seq[j] < seq[i] && dp[i] < dp[j] + 1){
                     dp[i] = dp[j] +1;
                 }
             }
