@@ -17,7 +17,7 @@ public class BeakJoon_1541 {
         while(st.hasMoreTokens()){
             int t = 0;
 
-            StringTokenizer st_p = new StringTokenizer(br.readLine(),"+");
+            StringTokenizer st_p = new StringTokenizer(st.nextToken(),"+");
 
             while (st_p.hasMoreTokens()){
                 t += Integer.parseInt(st_p.nextToken());
