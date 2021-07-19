@@ -30,7 +30,7 @@ public class BeakJoon_13305 {
         long minCost = cost[0];
 
         //기름값 검증
-        for(int i = 0; i < N; i++){
+        for(int i = 0; i < N -1; i++){
             if(cost[i] < minCost){
                 minCost = cost[i];
             }
