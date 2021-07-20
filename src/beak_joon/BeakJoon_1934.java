@@ -23,7 +23,7 @@ public class BeakJoon_1934 {
 
             int d = gcd(a,b);
 
-            sb.append(a*b/d);
+            sb.append(a*b/d).append('\n');
         }
         System.out.println(sb);
     }
