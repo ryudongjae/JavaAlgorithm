@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 public class Night_Work {
     public long solution(int n, int[] works) {
         long answer = 0;
-        java.util.PriorityQueue<Long> Nw = new PriorityQueue<>(Collections.reverseOrder());//Collections.reverseOrder() 내림 차순으로 정렬.
+        PriorityQueue<Long> Nw = new PriorityQueue<>(Collections.reverseOrder());//Collections.reverseOrder() 내림 차순으로 정렬.
 
         long sum = 0;
         for (long work : works) {
@@ -20,11 +20,12 @@ public class Night_Work {
 
         for(int i =0; i<n; i++){
             long now = Nw.poll();
+            if(now ==0 )break;
             Nw.add(now-1);
         }
 
         for (Long s : Nw) {
-            answer +=(s*s);
+            answer +=Math.pow(s,2);
         }
         return answer;
 
