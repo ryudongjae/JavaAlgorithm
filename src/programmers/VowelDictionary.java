@@ -5,11 +5,11 @@ public class VowelDictionary {
         String words = "AEIOU";
         int[] var = {781,156,31,6,1};
         int index = word.length();
-        int result = word.length();
+        int value = word.length();
         for(int i = 0; i< word.length(); i++){
             index = words.indexOf(word.charAt(i));
-            result += var[i]*index;
+            value += var[i]*index;
         }
-        return result;
+        return value;
     }
 }
