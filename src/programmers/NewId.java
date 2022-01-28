@@ -2,11 +2,11 @@ package programmers;
 
 public class NewId {
     public String solution(String new_id) {
-        String answer = new_id.toLowerCase();
+        String answer = new_id.toLowerCase(); //1단계
 
-        answer = answer.replaceAll("[^-_.a-z0-9]","");
-        answer = answer.replaceAll("[.]{2,}",".");
-        answer = answer.replaceAll("^[.]|[.]$","");
+        answer = answer.replaceAll("[^-_.a-z0-9]",""); //2
+        answer = answer.replaceAll("[.]{2,}","."); //3
+        answer = answer.replaceAll("^[.]|[.]$",""); //4
 
         if (answer.equals(""))answer+="a";
         if(answer.length()>= 16){

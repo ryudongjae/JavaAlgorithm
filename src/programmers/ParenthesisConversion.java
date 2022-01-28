@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ParenthesisConversion {
     int position;
-    public String solution(String p) {
+    public  String solution(String p) {
         if (p.isEmpty())return p;
 
         boolean correct = isCorrect(p);
@@ -27,6 +27,7 @@ public class ParenthesisConversion {
         }
         return result;
     }
+
 
     boolean isCorrect(String s){
         boolean ret = true;

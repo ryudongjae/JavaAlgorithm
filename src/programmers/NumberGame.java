@@ -1,6 +1,5 @@
 package programmers;
 
-
 import java.util.Arrays;
 
 public class NumberGame {
