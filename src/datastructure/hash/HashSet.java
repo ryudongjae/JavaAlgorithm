@@ -64,7 +64,7 @@ public class HashSet<E> implements Set<E>{
         else{
 
             Node<E> temp = table[idx]; // 현재 노드
-            Node<E> prev = null;  //temp 이전 노드
+            Node<E> prev = null;  //blockSize 이전 노드
 
             while(temp != null){
 
