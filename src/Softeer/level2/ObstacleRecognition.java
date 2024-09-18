@@ -9,7 +9,7 @@ public class ObstacleRecognition {
 
     //map size
     static int N ;
-    static int vector[][];
+    static int vector[][] = {{1,0},{-1,0},{0,1},{0,-1}};
 
     //map
     static char arr[][];
@@ -30,6 +30,7 @@ public class ObstacleRecognition {
                 //블록 별로 카운트가 되어야함
                 if(arr[i][j]=='1'){
                     count.add(bfs(i,j));
+                    System.out.println(i+" , "+ j);
                 }
             }
         }
@@ -59,20 +60,94 @@ public class ObstacleRecognition {
         int ni, nj;
 
         while (!queue.isEmpty()) {
-            count++;  // 블록 크기 증가
+            count++;  // W블록 크기 증가
             now = queue.poll();  // 큐에서 현재 위치 꺼냄
 
             for (int[] d : vector) {  // 상하좌우 탐색
                 ni = now[0] + d[0];  // 새로운 x 좌표
                 nj = now[1] + d[1];  // 새로운 y 좌표
+                System.out.println(ni+" , "+ nj);
+                System.out.println("now: "+now[0]+" , "+ now[1]);
                 if (isCheck(ni, nj)) {  // 해당 좌표가 유효하고 장애물이 있는지 확인
+                    //장애물이 있다면 queue에 추가 
+                    System.out.println("큐에 들어간 인자값 :"+ ni+" , "+ nj);
                     queue.offer(new int[]{ni, nj});  // 큐에 추가하여 다음 탐색 진행
                     arr[ni][nj] = '0';  // 방문 처리
                 }
             }
         }
-
+        System.out.println("count : "+count);
         return count;  // 해당 블록의 크기 반환
     }
 
+
+    //\1 , 0
+    //now: 0 , 0
+    //-1 , 0
+    //now: 0 , 0
+    //0 , 1
+    //now: 0 , 0
+    //큐에 들어간 인자값 :0 , 1
+    //0 , -1
+    //now: 0 , 0
+
+    //1 , 1
+    //now: 0 , 1
+    //큐에 들어간 인자값 :1 , 1
+    //-1 , 1
+    //now: 0 , 1
+    //0 , 2
+    //now: 0 , 1
+    //큐에 들어간 인자값 :0 , 2
+    //0 , 0
+    //now: 0 , 1
+
+    //2 , 1
+    //now: 1 , 1
+    //큐에 들어간 인자값 :2 , 1
+    //0 , 1
+    //now: 1 , 1
+    //1 , 2
+    //now: 1 , 1
+    //큐에 들어간 인자값 :1 , 2
+    //1 , 0
+    //now: 1 , 1
+
+    //1 , 2
+    //now: 0 , 2
+    //-1 , 2
+    //now: 0 , 2
+    //0 , 3
+    //now: 0 , 2
+    //0 , 1
+    //now: 0 , 2
+
+    //3 , 1
+    //now: 2 , 1
+    //1 , 1
+    //now: 2 , 1
+    //2 , 2
+    //now: 2 , 1
+    //큐에 들어간 인자값 :2 , 2
+    //2 , 0
+    //now: 2 , 1
+
+    //2 , 2
+    //now: 1 , 2
+    //0 , 2
+    //now: 1 , 2
+    //1 , 3
+    //now: 1 , 2
+    //1 , 1
+    //now: 1 , 2
+
+    //now: 1 , 2
+    //3 , 2
+    //now: 2 , 2
+    //1 , 2
+    //now: 2 , 2
+    //2 , 3
+    //now: 2 , 2
+    //2 , 1
+    //now: 2 , 2
 }
